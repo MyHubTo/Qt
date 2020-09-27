@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-
 }
 
 void MainWindow::inti()
@@ -69,8 +68,6 @@ void MainWindow::creatItemsARow(int rowNo, QString Name, QString Sex, QDate birt
     if(Sex=="男")
     {
         icon.addFile("/home/mrzhao/Desktop/icons/person.svg");
-
-
     }
     else
     {
@@ -117,7 +114,6 @@ void MainWindow::creatItemsARow(int rowNo, QString Name, QString Sex, QDate birt
     ui->tableWidget->setItem(rowNo,colScore,item);
 
 }
-
 
 void MainWindow::on_pushBut_setTabHead_clicked()
 {
@@ -171,7 +167,9 @@ void MainWindow::on_pushBut_insetRow_clicked()
 
 void MainWindow::on_pushBut_InitTab_clicked()
 {
+    //设置行数
     on_pushBu_setRowNum_clicked();
+    //设置间隔行颜色
     on_checkBox_RowColor_clicked(true);
     QString strName,strSex;
     bool isParty=false;
@@ -232,8 +230,6 @@ void MainWindow::on_pushBut_InsertCol_clicked()
     int rowCount=ui->tableWidget->rowCount();
     ui->tableWidget->insertRow(rowCount);
     creatItemsARow(rowCount,"SLAM","男",QDate::fromString("1999-01-27","yyyy-MM-dd"),"汉族",false,85);
-
-
 }
 
 void MainWindow::on_pushBut_DelCurrRow_clicked()
