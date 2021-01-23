@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/wav">
+        <file>wav/Windows Shutdown.wav</file>
+    </qresource>
+</RCC>
