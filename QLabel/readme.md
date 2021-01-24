@@ -16,3 +16,10 @@ QFontMetrics类中的elidedText(）函数用来进行文本的省略，第一个
         ElideNone
     };
 ```
+## 播放gif图片
+1.添加头文件#include<QMovie>;
+```cpp
+    QMovie *movie=new QMovie(":/images/images/gif.gif");
+    ui->label->setMovie(movie);
+    movie->start();
+```
